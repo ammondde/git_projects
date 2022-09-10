@@ -2,6 +2,7 @@
 
 #Import Module
 import random
+import sys
 
 #Define objects in List
 choice_list = ("rock", "paper", "scissors")
@@ -16,6 +17,7 @@ if join.startswith('y'):
 #If assigned variable doesn't start with letter 'y' then end
 else:
     print ("Maybe some other time ")
+    sys.exit()
  
 #User inputs choice which is then printed    
 player_choice = input ("Player one please choose: rock  paper or scissors    ")
@@ -23,7 +25,7 @@ print ("Your choice is: ", player_choice)
 
 #PC choose and print random choice
 computer_choice = print("Computer's choice is: " + random.choice(choice_list))
-    
+
 #Decision path  
 if player_choice == computer_choice:
     print ("Both players selected {player_choice}, the game is a tie!")
@@ -42,6 +44,9 @@ elif player_choice == "scissors":
         print("Rock crushes scissors, computer wins")
     else:
         print("Scissors cut paper, player wins")
+            
+
+    
 
 
 
